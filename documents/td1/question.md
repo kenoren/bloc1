@@ -24,3 +24,9 @@ POST :
 ## Question 3
 
 Le protocole HTTP est extensible grace à l'utilisation d'en-tetes, qui permettent d'ajouter des cookies au flux et de créer une session pour partager un meme contexte ou etat sur chaque requetes HTTP
+
+## Question 4 
+
+HTTP n’a pas besoin que le serveur conserve des informations sur un client entre deux requêtes c'est pour ça qu'il est qualifié de protocole sans etat.
+
+il n'y a pas de lien entre deux requêtes qui sont effectuées successivement sur la même connexion. Cela devient très rapidement problématique lorsque les utilisateurs veulent interagir avec une page de façon cohérente
