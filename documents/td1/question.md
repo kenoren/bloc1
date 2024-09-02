@@ -53,8 +53,12 @@ exemple.com = nom de domaine
 
 Les codes de statut HTTP se décomposent en 5 grandes familles :
 
-*Un code 1xx indique une réponse provisoire (non implémenté avec HTTP/1.0) ;
-*Un code 2xx (200, 201, 202, 204) indique que la requête a été traitée avec succès ;
-*Un code 3xx(300, 301, 302, 304) indique que la requête doit être redirigée ;
-*Un code 4xx (400, 401, 403, 404) indique une erreur côté client ;
-*Un code 5xx (500, 501, 502, 503) indique une erreur côté serveur.
+* Un code 1xx indique une réponse provisoire (non implémenté avec HTTP/1.0) ;
+
+* Un code 2xx (200, 201, 202, 204) indique que la requête a été traitée avec succès ;
+
+* Un code 3xx(300, 301, 302, 304) indique que la requête doit être redirigée ;
+
+* Un code 4xx (400, 401, 403, 404) indique une erreur côté client ;
+
+* Un code 5xx (500, 501, 502, 503) indique une erreur côté serveur.
