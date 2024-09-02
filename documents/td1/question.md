@@ -62,3 +62,7 @@ Les codes de statut HTTP se décomposent en 5 grandes familles :
 * Un code 4xx (400, 401, 403, 404) indique une erreur côté client ;
 
 * Un code 5xx (500, 501, 502, 503) indique une erreur côté serveur.
+
+## Question 7
+
+mécanisme du protocole HTTP qui permet de proposer une même ressource (identifiée par son URI) sous plusieurs formes différentes
