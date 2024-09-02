@@ -30,3 +30,15 @@ Le protocole HTTP est extensible grace à l'utilisation d'en-tetes, qui permette
 HTTP n’a pas besoin que le serveur conserve des informations sur un client entre deux requêtes c'est pour ça qu'il est qualifié de protocole sans etat.
 
 il n'y a pas de lien entre deux requêtes qui sont effectuées successivement sur la même connexion. Cela devient très rapidement problématique lorsque les utilisateurs veulent interagir avec une page de façon cohérente
+
+## Question 5
+
+https://www..exemple.com:80/path/index.html?id=8#article
+
+https = protocole
+www. = sous-domaine
+exemple.com = nom de domaine
+:80 = port
+/path/index.html = chemin ressources
+?id=8 = paramètres
+#article = fragment
