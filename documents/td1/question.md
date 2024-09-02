@@ -36,9 +36,15 @@ il n'y a pas de lien entre deux requêtes qui sont effectuées successivement su
 https://www..exemple.com:80/path/index.html?id=8#article
 
 https = protocole
+
 www. = sous-domaine
+
 exemple.com = nom de domaine
+
 :80 = port
+
 /path/index.html = chemin ressources
+
 ?id=8 = paramètres
+
 #article = fragment
