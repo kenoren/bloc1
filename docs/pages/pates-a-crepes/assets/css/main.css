@@ -14,21 +14,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre pour imiter un document */
     border-radius: 10px; /* Coins légèrement arrondis */
 }
-h2{
-    color: green;
-}
 
 p{
-    color: grey;
-}
-
-b{
-    color: black;
-}
-
-a{
-    text-decoration: none;
-    color: aquamarine;
+    font-size: larger;
 }
 
 .rouge{
