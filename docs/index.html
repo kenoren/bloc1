@@ -9,33 +9,57 @@
 </head>
 <body>
     <header>
-        <h1>Bloc1-SLAM</h1>
+        <div class="profile">
+            <img src="./assets/css/moi.png" alt="Votre Nom">
+            <span>Mathis FOUREY</span>
+        </div>
+        <div class="header-title">
+            <h1>Bloc1-SLAM</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
-                <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
-                <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
-                <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
-                <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
-                <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
-                <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
+                <li><a href="https://github.com/kenoren">Mon Github</a></li>
+                <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/">Linkedin</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h2>Documents</h2>
         <p>Voici les documents importants que vous pouvez consulter :</p>
-        <ul>
+        
+        <div class="folder" onclick="toggleProjects('td1')">TD1</div>
+        <ul id="td1" class="projects">
             <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
+        </ul>
+
+        <div class="folder" onclick="toggleProjects('td2')">TD2</div>
+        <ul id="td2" class="projects">
             <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
             <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
             <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
+        </ul>
+
+        <div class="folder" onclick="toggleProjects('td3')">TD3</div>
+        <ul id="td3" class="projects">
             <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
             <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
+        </ul>
+
+        <div class="folder" onclick="toggleProjects('td4')">TD4</div>
+        <ul id="td4" class="projects">
+            <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
+            <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
         </ul>
     </main>
     <footer>
         <p>&copy; 2024 Web local. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        function toggleProjects(tdId) {
+            const projectsList = document.getElementById(tdId);
+            projectsList.style.display = projectsList.style.display === 'none' || projectsList.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
