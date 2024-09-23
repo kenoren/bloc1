@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo1 td4 </title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../js/td4/exercice.js"></script>
+</head>
+    <body onload=showDate();>   
+        <p><b>Cliquez sur le bouton pour changer la couleur du background.</b></p> 
+        <button onclick = "changeColor('blue');">Bleu</button>
+        <button onclick = "changeColor('green');">Vert</button> 
+        <button onclick = "changeColor('red');">Rouge</button>
+        <button onclick = "changeColor('yellow');">Jaune</button>
+
+        <p><b>Cliquez sur le bouton pour changer la couleur du background.</b></p>
+        <input type="text" id="inputElement" placeholder="saisissez un élement">
+        <button id="ajouterBtn">Ajouter</button>
+        <ul id="liste"></ul>
+
+        <p><b>Cliquez sur le bouton pour calculer la somme des deux nombres.</b></p>
+        <input id="nbr1"> + <input id="nbr2">
+      <button onclick="somme()">Calculer la somme</button>
+      = <input id="sum"><br /><br />
+
+      <select name="jeux" id="jeux" onChange="changeit(this.value)">
+        <option value="hidden">Call of Duty</option>
+        <option value="hidden2">Counter Strike</option>
+        <option value="hidden3">Halo 3</option>
+      </select><br /><br />
+       
+       
+      <img id="hidden" src="../../assets/css/td4/callOfDuty.png" style="display: none;"/>
+      <img id="hidden2" src="../../assets/css/td4/csgo.png" style="display: none;"/>
+      <img id="hidden3" src="../../assets/css/td4/halo3.jpg" style="display: none;"/>
+    </body>
+
+    <p><b>Survoler pour afficher une alerte.</b></p>
+    <p id="survolElement">Passez la souris ici pour afficher une alerte !</p>
+
+    <span id='horloge' style="background-color:#1C1C1C;color:silver;font-size:40px;"></span>
+
+    <br /><br />
+
+    <form action='JS-Confirm.html' name='formulaire'>
+    Votre age     <input type='text'   name='age'>
+    <input type='button' value='Confirmer' onClick='ConfirmerAge()'>
+    </form>
+
+</html>
