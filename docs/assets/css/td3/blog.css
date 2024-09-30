@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #003f6b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../td3/header.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* Pour couvrir toute la zone du nav */
+    background-position: center; /* Pour centrer l'image */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    padding: 10px 0; /* Ajustez selon vos besoins */
+}
+
+header .logo {
+    margin-left: 100px;
+}
+
+hr{
+    background-color: #00aaff;
+    width: 50px;
+    height: 4px;
+    margin-bottom: 30px;
+}
+
+
+/* Styles de la navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Effet de survol de la barre de navigation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position de la barre sous le texte */
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Couleur de la barre sous l'élément de menu */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Main Section Styling */
+main {
+    padding: 40px 20px;
+}
+
+.fa-regular fa-circle-check{
+    background-color: #003f6b;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Categories Section */
+.categories {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 20%;
+}
+
+.categories h2 {
+    margin-bottom: 10px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories ul li {
+    margin-bottom: 10px;
+}
+
+.categories ul li a {
+    text-decoration: none;
+    color: #003f6b;
+    font-weight: bold;
+}
+
+/* Blog Section */
+.blog {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+.blog h2 {
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    height: 500px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+}
+
+.blog-post a {
+    color: #003f6b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Tags and Recent Posts Section */
+.tags-posts {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 25%;
+}
+
+.tags h2, .recent-posts h2 {
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tags span:hover{
+    background-color: #00aaff;
+}
+
+.blog-post a:hover{
+    color: #00aaff;
+}
+
+.tags1 span:hover{
+    background-color: #00aaff;
+}
+
+.categories ul li a:hover{
+    color: #00aaff;
+}
+
+.tags span {
+    background-color: #003f6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.tags1 span {
+    background-color: #003f6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.recent-posts .post {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.recent-posts .post img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.recent-posts .post a {
+    color: #003f6b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.recent-posts .post p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(to right, #003f6b, #00aaff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
