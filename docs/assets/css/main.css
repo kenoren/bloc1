@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #7b7d7d;
 }
 
 header {
-    background-color: #333;
+    background-color: #7b7d7d;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -17,25 +17,30 @@ header {
 .profile {
     display: flex;
     align-items: center;
-    margin-right: auto; /* Permet d'envoyer le titre au centre */
+    margin-right: auto;
+    color: #1f497d;
 }
 
+.profile p{
+    font-size: 20px;
+}
 .header-title {
-    flex-grow: 1; /* Prend l'espace restant pour centrer le titre */
-    text-align: center; /* Centre le titre */
+    flex-grow: 1;
+    text-align: center;
+    color: #1f497d;
 }
 
 .profile img {
-    width: 150px; /* Ajustez la taille selon vos besoins */
-    height: 150px; /* Ajustez la taille selon vos besoins */
-    border-radius: 50%; /* Rend l'image ronde */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0 0; /* Ajoutez un peu d'espace au-dessus de la nav */
+    margin: 10px 0 0;
 }
 
 nav ul li {
@@ -44,13 +49,14 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    color: #1f497d;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #7E2EA0;
 }
 
 main {
@@ -61,58 +67,149 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main h2 {
-    margin-top: 0;
+
+
+.cssanimation {
+    font-size: 30px;
+    color: #a569bd;
 }
 
-ul {
-    padding-left: 20px;
+.open {
+    width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: inline-flex;
+    animation-name: open;
+    animation-duration: 3s; /* Durée de l'animation */
+    animation-iteration-count: infinite; /* Répète l'animation indéfiniment */
+    animation-direction: alternate; /* Fait l'animation dans les deux sens */
+    animation-fill-mode: forwards; /* Garde l'état final de l'animation */
+    font-size: 30px;
+    color: #a569bd;
 }
 
-ul li {
-    margin-bottom: 10px;
+@keyframes open {
+    0% { width: 0; }
+    100% { width: 1000px; } /* Largeur finale */
 }
 
-ul a {
-    color: #1a73e8;
-    text-decoration: none;
+.typing {
+    display: inline-block; /* Nécessaire pour l'animation */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    border-right: 2px solid #7E2EA0; /* Curseur */
+    animation: typing 2s steps(30, end) infinite, cursor .75s step-end infinite; /* Animation */
 }
 
-ul a:hover {
-    text-decoration: underline;
+@keyframes typing {
+    from { width: 0; }
+    to { width: 300px; } /* Ajustez selon la largeur de votre texte */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+@keyframes cursor {
+    50% { border-color: transparent; }
 }
+
+
 
 .folder {
     cursor: pointer;
-    color: #1a73e8;
-    text-decoration: underline;
+    color: #1f497d;
+    text-decoration: none;
+    font-size: 30px;
 }
+
+.folder:hover {
+    color: #a569bd;
+}
+
+a {
+    text-decoration: none;
+    color: #1f497d;
+    font-size: 20px;
+}
+
+a:hover{
+    color: #7E2EA0;
+}
+
 .projects {
     display: none;
     margin-left: 20px;
 }
-.profile {
-    display: flex;
-    align-items: center;
-}
-.profile img {
-    width: 100px; /* Ajustez la taille selon vos besoins */
-    height: 100px; /* Ajustez la taille selon vos besoins */
-    border-radius: 50%; /* Rend l'image ronde */
-    margin-right: 10px;
+
+
+footer {
+    background-color: #7b7d7d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position:;
+    width: 100%;
+    bottom: 0;
 }
 
-span{
-    font-size: 1.5em;
-    margin-left: 20px;
-}
+
+#btnAfficher {
+    text-decoration: none;
+    padding: 10px;
+    font-family: arial;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: #1f497d;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    }
+    
+    
+    #btnAfficher:hover {
+    padding: 10px;
+    background-color: #a569bd;
+    border: 4px solid #FFFFFF;
+    box-shadow: 1px 1px 4px #777777;
+    -webkit-box-shadow: 1px 1px 4px #777777;
+    -moz-box-shadow: 1px 1px 4px #777777;
+    }
+
+
+    #btnCacherTout {
+        text-decoration: none;
+        padding: 10px;
+        font-family: arial;
+        font-size: 1em;
+        color: #FFFFFF;
+        background-color: #1f497d;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        }
+        
+        
+        #btnCacherTout:hover {
+        padding: 10px;
+        background-color: #a569bd;
+        border: 4px solid #FFFFFF;
+        box-shadow: 1px 1px 4px #777777;
+        -webkit-box-shadow: 1px 1px 4px #777777;
+        -moz-box-shadow: 1px 1px 4px #777777;
+        }
+
+        hr {
+            width: 200px;
+            background-color: #1f497d;
+            height: 2px;
+            margin-left: 0; /* Aligne l'hr à gauche */
+            margin-right: auto; /* Optionnel : permet d'utiliser l'espace restant à droite */
+            margin-bottom: 20px; /* Optionnel : ajoute de l'espace en dessous */
+        }
+        
+        .container{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main{
+            flex: 1;
+        }
