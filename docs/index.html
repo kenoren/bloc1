@@ -1,64 +1,104 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web local</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+  <meta charset="utf-8">
+  <title>WebDev</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <header>
-        <div class="profile">
-            <img src="./assets/css/moi.png" alt="Votre Nom">
-            <span>Mathis FOUREY</span>
-        </div>
-        <div class="header-title">
-            <h1>Bloc1-SLAM</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="https://github.com/kenoren">Mon Github</a></li>
-                <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/">Linkedin</a></li>
+    <div class="container">
+        <header>    
+            <div class="profile">
+                <img id="logo" src="./assets/css/logoDark.png" alt="Logo"> <!-- Ajout de l'ID "logo" -->
+            </div>
+            <div class="header-title">
+                <h1 id="theme-toggle">Bloc1-SLAM</h1>
+                <p>[Cliquez au dessus pour choisir le thème de la page]</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/kenoren">Mon Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/">Linkedin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Documents</h2>
+            <p class="typing">Voici les documents importants que vous pouvez consulter :</p>
+
+            <hr>
+            <button id="btnAfficher" onclick="btnToutAfficher()">Tout afficher</button>
+            <button id="btnCacherTout" onclick="btnRienAfficher()">Tout cacher</button>
+            <hr>
+            
+            <div class="folder" onclick="toggleProjects('td1')">TD1</div>
+            <ul id="td1" class="projects">
+                <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Documents</h2>
-        <p>Voici les documents importants que vous pouvez consulter :</p>
-        
-        <div class="folder" onclick="toggleProjects('td1')">TD1</div>
-        <ul id="td1" class="projects">
-            <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
-        </ul>
 
-        <div class="folder" onclick="toggleProjects('td2')">TD2</div>
-        <ul id="td2" class="projects">
-            <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
-            <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
-            <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
-        </ul>
+            <div class="folder" onclick="toggleProjects('td2')">TD2</div>
+            <ul id="td2" class="projects">
+                <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
+                <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
+                <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
+            </ul>
 
-        <div class="folder" onclick="toggleProjects('td3')">TD3</div>
-        <ul id="td3" class="projects">
-            <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
-            <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
-        </ul>
+            <div class="folder" onclick="toggleProjects('td3')">TD3</div>
+            <ul id="td3" class="projects">
+                <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
+                <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
+            </ul>
 
-        <div class="folder" onclick="toggleProjects('td4')">TD4</div>
-        <ul id="td4" class="projects">
-            <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
-            <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2024 Web local. Tous droits réservés.</p>
-    </footer>
+            <div class="folder" onclick="toggleProjects('td4')">TD4</div>
+            <ul id="td4" class="projects">
+                <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
+                <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Web local. Tous droits réservés.</p>
+        </footer>
+    </div>
 
     <script>
+        // Fonction pour basculer les projets
         function toggleProjects(tdId) {
             const projectsList = document.getElementById(tdId);
             projectsList.style.display = projectsList.style.display === 'none' || projectsList.style.display === '' ? 'block' : 'none';
+        }
+
+        // Fonction pour basculer entre les thèmes
+        function toggleTheme() {
+            const body = document.body;
+            const logo = document.getElementById('logo'); // Sélectionne l'image du logo
+            
+            body.classList.toggle('light-theme'); // Bascule le thème
+
+            // Vérifie si le thème actuel est le light theme et change l'image en conséquence
+            if (body.classList.contains('light-theme')) {
+                logo.src = './assets/css/logoLigth.png'; // Logo pour le light theme (corrige le nom ici)
+            } else {
+                logo.src = './assets/css/logoDark.png'; // Logo pour le dark theme
+            }
+        }
+
+        // Attache l'événement onclick au titre pour changer le thème
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+        function btnToutAfficher() {
+            const allProjects = document.querySelectorAll('.projects');
+            allProjects.forEach(project => {
+                project.style.display = 'block';
+            });
+        }
+
+        function btnRienAfficher() {
+            const allProjects = document.querySelectorAll('.projects');
+            allProjects.forEach(project => {
+                project.style.display = 'none';
+            });
         }
     </script>
 </body>
