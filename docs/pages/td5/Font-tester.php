@@ -12,7 +12,7 @@
 
 <?php
 // Récupération des paramètres de l'URL
-$message = isset($_GET['message']) ? $_GET['message'] : '';
+ 
 $color = isset($_GET['color']) ? $_GET['color'] : 'black';
 $size = isset($_GET['size']) && is_numeric($_GET['size']) ? $_GET['size'] : 12;
 
