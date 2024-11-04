@@ -1,13 +1,22 @@
-body {
+body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #7b7d7d;
+    background-color: #2b2b2a;
+}
+
+footer {
+    background-color: #030303;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 header {
-    background-color: #7b7d7d;
+    background-color: #030303;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -17,30 +26,24 @@ header {
 .profile {
     display: flex;
     align-items: center;
-    margin-right: auto;
-    color: #1f497d;
+    margin-right: auto; /* Permet d'envoyer le titre au centre */
 }
 
-.profile p{
-    font-size: 20px;
-}
 .header-title {
-    flex-grow: 1;
-    text-align: center;
-    color: #1f497d;
+    flex-grow: 1; /* Prend l'espace restant pour centrer le titre */
+    text-align: center; /* Centre le titre */
 }
 
 .profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 70px; /* Ajustez la taille selon vos besoins */
+    height: 70px; /* Ajustez la taille selon vos besoins */
     margin-right: 10px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 10px 0 0; /* Ajoutez un peu d'espace au-dessus de la nav */
 }
 
 nav ul li {
@@ -49,88 +52,64 @@ nav ul li {
 }
 
 nav a {
-    font-weight: bold;
+    color: #fff;
     text-decoration: none;
-    color: #1f497d;
+    font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: none;
-    color: #7E2EA0;
+    text-decoration: underline;
+    color: orange;
 }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0; /* Ajoutez un peu d'espace au-dessus de la nav */
+}
+
 
 main {
     max-width: 800px;
+    max-height: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #030303;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+   width: 800px;
 }
 
-
-
-.cssanimation {
-    font-size: 30px;
-    color: #a569bd;
+main h2 {
+    margin-top: 0;
 }
 
-.open {
-    width: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-    display: inline-flex;
-    animation-name: open;
-    animation-duration: 3s; /* Durée de l'animation */
-    animation-iteration-count: infinite; /* Répète l'animation indéfiniment */
-    animation-direction: alternate; /* Fait l'animation dans les deux sens */
-    animation-fill-mode: forwards; /* Garde l'état final de l'animation */
-    font-size: 30px;
-    color: #a569bd;
+ul {
+    padding-left: 20px;
 }
 
-@keyframes open {
-    0% { width: 0; }
-    100% { width: 1000px; } /* Largeur finale */
+ul li {
+    margin-bottom: 10px;
 }
 
-.typing {
-    display: inline-block; /* Nécessaire pour l'animation */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    border-right: 2px solid #7E2EA0; /* Curseur */
-    animation: typing 2s steps(30, end) infinite, cursor .75s step-end infinite; /* Animation */
+ul a {
+    color: #fff;
+    text-decoration: none;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 300px; } /* Ajustez selon la largeur de votre texte */
+ul a:hover {
+    text-decoration: underline;
+    color: orange;
 }
-
-@keyframes cursor {
-    50% { border-color: transparent; }
-}
-
-
 
 .folder {
     cursor: pointer;
-    color: #1f497d;
-    text-decoration: none;
-    font-size: 30px;
+    color: #fff;
+    text-decoration: underline;
 }
 
 .folder:hover {
-    color: #a569bd;
-}
-
-a {
-    text-decoration: none;
-    color: #1f497d;
-    font-size: 20px;
-}
-
-a:hover{
-    color: #7E2EA0;
+    color: orange;
 }
 
 .projects {
@@ -138,17 +117,26 @@ a:hover{
     margin-left: 20px;
 }
 
-
-footer {
-    background-color: #7b7d7d;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position:;
-    width: 100%;
-    bottom: 0;
+.typing {
+    display: inline-block;
+    overflow: hidden; /* Assure que le contenu n'est pas révélé avant l'animation */
+    border-right: .10em solid orange; /* Le curseur de type machine à écrire */
+    white-space: nowrap; /* Garde le contenu sur une seule ligne */
+    letter-spacing: .15em; /* Ajuste l'espacement des lettres */
+    animation: typing 8s steps(55, end) infinite, /* Animation totale: 8.5s (inclut pause de 5s) */
+               blink-caret .75s step-end infinite; /* Clignotement du curseur */
 }
 
+/* Les effets d'animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 67ch; } /* Ajusté pour correspondre au nombre de caractères */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
 
 #btnAfficher {
     text-decoration: none;
@@ -156,60 +144,114 @@ footer {
     font-family: arial;
     font-size: 1em;
     color: #FFFFFF;
-    background-color: #1f497d;
+    background-color: #2b2b2a;
     border-radius: 24px;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
-}
+    }
     
     
-#btnAfficher:hover {
+    #btnAfficher:hover {
     padding: 10px;
-    background-color: #a569bd;
-    border: 4px solid #FFFFFF;
-    box-shadow: 1px 1px 4px #777777;
-    -webkit-box-shadow: 1px 1px 4px #777777;
-    -moz-box-shadow: 1px 1px 4px #777777;
-}
-
-
-#btnCacherTout {
-        text-decoration: none;
-        padding: 10px;
-        font-family: arial;
-        font-size: 1em;
-        color: #FFFFFF;
-        background-color: #1f497d;
-        border-radius: 24px;
-        -webkit-border-radius: 24px;
-        -moz-border-radius: 24px;
-}
-        
-        
-#btnCacherTout:hover {
-    padding: 10px;
-    background-color: #a569bd;
+    background-color: orange;
     border: 4px solid #FFFFFF;
     box-shadow: 1px 1px 4px #777777;
     -webkit-box-shadow: 1px 1px 4px #777777;
     -moz-box-shadow: 1px 1px 4px #777777;
     }
 
-hr {
-    width: 200px;
-    background-color: #1f497d;
-    height: 2px;
-    margin-left: 0; /* Aligne l'hr à gauche */
-    margin-right: auto; /* Optionnel : permet d'utiliser l'espace restant à droite */
-    margin-bottom: 20px; /* Optionnel : ajoute de l'espace en dessous */
-}
+
+    #btnCacherTout {
+        text-decoration: none;
+        padding: 10px;
+        font-family: arial;
+        font-size: 1em;
+        color: #FFFFFF;
+        background-color: #2b2b2a;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        }
         
-.container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+        
+        #btnCacherTout:hover {
+        padding: 10px;
+        background-color: orange;
+        border: 4px solid #FFFFFF;
+        box-shadow: 1px 1px 4px #777777;
+        -webkit-box-shadow: 1px 1px 4px #777777;
+        -moz-box-shadow: 1px 1px 4px #777777;
+        }
+
+        hr {
+            width: 250px;
+            background-color: orange;
+            height: 2px;
+            margin-left: 0; /* Aligne l'hr à gauche */
+            margin-right: auto; /* Optionnel : permet d'utiliser l'espace restant à droite */
+            margin-bottom: 20px; /* Optionnel : ajoute de l'espace en dessous */
+        }
+        
+        .container{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main{
+            flex: 1;
+        }
+
+
+/* Styles par défaut (dark theme) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2a;
 }
 
-main{
-    flex: 1;
+header, main, footer {
+    background-color: #030303;
+    color: #fff;
+}
+
+/* Thème clair */
+.light-theme {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.light-theme header, 
+.light-theme main, 
+.light-theme footer {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme nav a {
+    color: #000;
+}
+
+.light-theme nav a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.light-theme .folder{
+    color: #000;
+}
+
+.light-theme .folder:hover{
+    color: orange;
+}
+
+.light-theme ul a {
+    color: #000;
+    text-decoration: none;
+}
+
+.light-theme ul a:hover {
+    text-decoration: underline;
+    color: orange;
 }
