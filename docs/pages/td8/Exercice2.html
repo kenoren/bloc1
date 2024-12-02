@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Flexbox et Media Queries</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .item {
+            background-color: #0046b7;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            flex: 1 1 calc(33.33% - 20px); /* 3 colonnes par défaut */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media query : 2 colonnes pour les écrans ≤ 1024px */
+        @media (max-width: 1024px) {
+            .item {
+                flex: 1 1 calc(50% - 20px); /* 2 colonnes */
+            }
+        }
+
+        /* Media query : 1 colonne pour les écrans ≤ 800px */
+        @media (max-width: 800px) {
+            .item {
+                flex: 1 1 100%; /* 1 colonne */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Colonne 1</div>
+        <div class="item">Colonne 2</div>
+        <div class="item">Colonne 3</div>
+        <div class="item">Colonne 4</div>
+        <div class="item">Colonne 5</div>
+        <div class="item">Colonne 6</div>
+    </div>
+</body>
+</html>

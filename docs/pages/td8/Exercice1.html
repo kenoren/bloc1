@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Media Queries</title>
+    <style>
+        /* Styles par défaut pour écrans larges */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        img {
+            width: 800px;
+            height: auto;
+            max-width: 100%; /* Pour que l'image ne dépasse jamais la taille de l'écran */
+        }
+
+        /* Media query pour écrans de largeur inférieure à 800px */
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            img {
+                width: 50%; /* Divise la largeur de l'image par 2 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice Media Queries</h1>
+    <img src="https://dummyimage.com/800x600/000/fff" alt="Image dummy">
+    <p>Le texte et l'image s'adaptent en fonction de la taille de l'écran.</p>
+</body>
+</html>
