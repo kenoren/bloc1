@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style du menu */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .menu a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar .hamburger {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    /* Menu déroulant pour les petits écrans */
+    .dropdown {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    .dropdown a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Responsivité */
+    @media (max-width: 768px) {
+      .navbar .menu {
+        display: none;
+      }
+
+      .navbar .hamburger {
+        display: block;
+      }
+
+      .dropdown.active {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    // Script pour afficher/masquer le menu hamburger
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const dropdown = document.querySelector(".dropdown");
+
+      hamburger.addEventListener("click", function () {
+        dropdown.classList.toggle("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Logo</div>
+      <div class="menu">
+        <a href="#">Our Work</a>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="hamburger">☰</div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Our Work</a>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+</body>
+</html>
