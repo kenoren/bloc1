@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .content h2 {
+      margin: 0 0 10px;
+    }
+
+    .content p {
+      margin: 0;
+    }
+
+    .image {
+      flex-shrink: 0;
+    }
+
+    .image img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum avec sections ajustées</h1>
+
+  <div class="section">
+    <div class="content">
+      <h2>Section 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo.</p>
+    </div>
+    <div class="image">
+      <img src="https://via.placeholder.com/150" alt="Image Section 1">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <h2>Section 2</h2>
+      <p>Aenean pretium auctor commodo. Cras rhoncus fringilla lectus tristique sagittis.</p>
+    </div>
+    <div class="image">
+      <img src="https://via.placeholder.com/150" alt="Image Section 2">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <h2>Section 3</h2>
+      <p>Mauris quis pellentesque nisi. Curabitur bibendum augue lectus.</p>
+    </div>
+    <div class="image">
+      <img src="https://via.placeholder.com/150" alt="Image Section 3">
+    </div>
+  </div>
+</body>
+</html>
