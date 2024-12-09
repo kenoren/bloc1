@@ -2,14 +2,19 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebDev</title>
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+  <!-- Ajouter des icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>    
             <div class="profile">
-                <img id="logo" src="./assets/css/logoDark.png" alt="Logo"> <!-- Ajout de l'ID "logo" -->
+                <img id="logo" src="./assets/css/logoDark.png" alt="Logo">
             </div>
             <div class="header-title">
                 <h1 id="theme-toggle">Bloc1-SLAM</h1>
@@ -17,8 +22,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="https://github.com/kenoren">Mon Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/">Linkedin</a></li>
+                    <li><a href="https://github.com/kenoren" target="_blank"><i class="fab fa-github"></i> Mon Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
                 </ul>
             </nav>
         </header>
@@ -27,102 +32,108 @@
             <h2>Documents</h2>
             <p class="typing">Voici les documents importants que vous pouvez consulter :</p>
 
-            <hr>
-            <button id="btnAfficher" onclick="btnToutAfficher()">Tout afficher</button>
-            <button id="btnCacherTout" onclick="btnRienAfficher()">Tout cacher</button>
-            <hr>
+            <div class="actions">
+                <button id="btnAfficher" onclick="btnToutAfficher()">Tout afficher</button>
+                <button id="btnCacherTout" onclick="btnRienAfficher()">Tout cacher</button>
+            </div>
             
-            <div class="folder" onclick="toggleProjects('td1')">TD1</div>
-            <ul id="td1" class="projects">
-                <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
-            </ul>
+            <div class="folders">
+                <div class="folder" onclick="toggleProjects('td1')"><i class="fas fa-folder"></i> TD1</div>
+                <ul id="td1" class="projects">
+                    <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td2')">TD2</div>
-            <ul id="td2" class="projects">
-                <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
-                <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
-                <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
-            </ul>
+                <div class="folder" onclick="toggleProjects('td2')"><i class="fas fa-folder"></i> TD2</div>
+                <ul id="td2" class="projects">
+                    <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
+                    <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
+                    <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td3')">TD3</div>
-            <ul id="td3" class="projects">
-                <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
-                <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
-            </ul>
+                <div class="folder" onclick="toggleProjects('td3')"><i class="fas fa-folder"></i> TD3</div>
+                <ul id="td3" class="projects">
+                    <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
+                    <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td4')">TD4</div>
-            <ul id="td4" class="projects">
-                <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
-                <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
-            </ul>
+                <div class="folder" onclick="toggleProjects('td4')"><i class="fas fa-folder"></i> TD4</div>
+                <ul id="td4" class="projects">
+                    <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
+                    <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td5')">TD5</div>
-            <ul id="td5" class="projects">
-                <li><a href="./pages/td5/Font-tester.php">FontTester</a></li>
-                <li><a href="./pages/td5/Lorem-ipsum.php">LoremIpsum</a></li>
-                <li><a href="./pages/td5/Message.php">Message</a></li>
-                <li><a href="./pages/td5/Table-gen.php">TableGen</a></li>
-            </ul>
+                <div class="folder" onclick="toggleProjects('td5')"><i class="fas fa-folder"></i> TD5</div>
+                <ul id="td5" class="projects">
+                    <li><a href="./pages/td5/Font-tester.php">FontTester</a></li>
+                    <li><a href="./pages/td5/Lorem-ipsum.php">LoremIpsum</a></li>
+                    <li><a href="./pages/td5/Message.php">Message</a></li>
+                    <li><a href="./pages/td5/Table-gen.php">TableGen</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td7')">TD7</div>
-            <ul id="td7" class="projects">
-                <li><a href="./pages/td7/contact.html">Contact</a></li>
-                <li><a href="./pages/td7/signin.html">Validation</a></li>
-            </ul>
+                <div class="folder" onclick="toggleProjects('td7')"><i class="fas fa-folder"></i> TD7</div>
+                <ul id="td7" class="projects">
+                    <li><a href="./pages/td7/contact.html">Contact</a></li>
+                    <li><a href="./pages/td7/signin.html">Validation</a></li>
+                </ul>
 
-            <div class="folder" onclick="toggleProjects('td8')">TD8</div>
-            <ul id="td8" class="projects">
-                <li><a href="./pages/td8/Exercice1.html">Exercice1</a></li>
-                <li><a href="./pages/td8/Exercice2.html">Exercice2</a></li>
-                <li><a href="./pages/td8/Exercice3.html">Exercice3</a></li>
-                <li><a href="./pages/td8/Exercice4.html">Exercice4</a></li>
-                <li><a href="./pages/td8/Exercice5.html">Exercice5</a></li>
-                <li><a href="./pages/td8/la-firme.html">La Firme</a></li>
-                
-            </ul>
+                <div class="folder" onclick="toggleProjects('td8')"><i class="fas fa-folder"></i> TD8</div>
+                <ul id="td8" class="projects">
+                    <li><a href="./pages/td8/Exercice1.html">Exercice1</a></li>
+                    <li><a href="./pages/td8/Exercice2.html">Exercice2</a></li>
+                    <li><a href="./pages/td8/Exercice3.html">Exercice3</a></li>
+                    <li><a href="./pages/td8/Exercice4.html">Exercice4</a></li>
+                    <li><a href="./pages/td8/Exercice5.html">Exercice5</a></li>
+                    <li><a href="./pages/td8/la-firme.html">La Firme</a></li>
+                </ul>
+            </div>
         </main>
 
         <footer>
             <p>&copy; 2024 Web local. Tous droits réservés.</p>
         </footer>
+        
     </div>
 
     <script>
-        // Fonction pour basculer les projets
         function toggleProjects(tdId) {
             const projectsList = document.getElementById(tdId);
-            projectsList.style.display = projectsList.style.display === 'none' || projectsList.style.display === '' ? 'block' : 'none';
-        }
-
-        // Fonction pour basculer entre les thèmes
-        function toggleTheme() {
-            const body = document.body;
-            const logo = document.getElementById('logo'); // Sélectionne l'image du logo
-            
-            body.classList.toggle('light-theme'); // Bascule le thème
-
-            // Vérifie si le thème actuel est le light theme et change l'image en conséquence
-            if (body.classList.contains('light-theme')) {
-                logo.src = './assets/css/logoLigth.png'; // Logo pour le light theme (corrige le nom ici)
+            if (projectsList.style.display === 'none' || projectsList.style.display === '') {
+                projectsList.style.display = 'block';
+                setTimeout(() => projectsList.classList.add('show'), 10);  // Ajouter une animation d'apparition
             } else {
-                logo.src = './assets/css/logoDark.png'; // Logo pour le dark theme
+                projectsList.classList.remove('show');
+                setTimeout(() => projectsList.style.display = 'none', 300);  // Cache après l'animation
             }
         }
 
-        // Attache l'événement onclick au titre pour changer le thème
+        function toggleTheme() {
+            const body = document.body;
+            const logo = document.getElementById('logo');
+            
+            body.classList.toggle('light-theme');
+            
+            if (body.classList.contains('light-theme')) {
+                logo.src = './assets/css/logoLigth.png';
+            } else {
+                logo.src = './assets/css/logoDark.png';
+            }
+        }
+
         document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
         function btnToutAfficher() {
             const allProjects = document.querySelectorAll('.projects');
             allProjects.forEach(project => {
                 project.style.display = 'block';
+                setTimeout(() => project.classList.add('show'), 10);  // Animation d'apparition
             });
         }
 
         function btnRienAfficher() {
             const allProjects = document.querySelectorAll('.projects');
             allProjects.forEach(project => {
-                project.style.display = 'none';
+                project.classList.remove('show');
+                setTimeout(() => project.style.display = 'none', 300);  // Cache après animation
             });
         }
     </script>
