@@ -1,257 +1,154 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2b2b2a;
-}
-
-footer {
-    background-color: #030303;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-header {
-    background-color: #030303;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    margin-right: auto; /* Permet d'envoyer le titre au centre */
-}
-
-.header-title {
-    flex-grow: 1; /* Prend l'espace restant pour centrer le titre */
-    text-align: center; /* Centre le titre */
-}
-
-.profile img {
-    width: 70px; /* Ajustez la taille selon vos besoins */
-    height: 70px; /* Ajustez la taille selon vos besoins */
-    margin-right: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0 0; /* Ajoutez un peu d'espace au-dessus de la nav */
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0 0; /* Ajoutez un peu d'espace au-dessus de la nav */
-}
-
-
-main {
-    max-width: 800px;
-    max-height: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #030303;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #fff;
-   width: 800px;
-}
-
-main h2 {
-    margin-top: 0;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul a {
-    color: #fff;
-    text-decoration: none;
-}
-
-ul a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-.folder {
-    cursor: pointer;
-    color: #fff;
-    text-decoration: underline;
-}
-
-.folder:hover {
-    color: orange;
-}
-
-.projects {
-    display: none;
-    margin-left: 20px;
-}
-
-.typing {
-    display: inline-block;
-    overflow: hidden; /* Assure que le contenu n'est pas révélé avant l'animation */
-    border-right: .10em solid orange; /* Le curseur de type machine à écrire */
-    white-space: nowrap; /* Garde le contenu sur une seule ligne */
-    letter-spacing: .15em; /* Ajuste l'espacement des lettres */
-    animation: typing 8s steps(55, end) infinite, /* Animation totale: 8.5s (inclut pause de 5s) */
-               blink-caret .75s step-end infinite; /* Clignotement du curseur */
-}
-
-/* Les effets d'animation */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 67ch; } /* Ajusté pour correspondre au nombre de caractères */
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
-}
-
-#btnAfficher {
-    text-decoration: none;
-    padding: 10px;
-    font-family: arial;
-    font-size: 1em;
-    color: #FFFFFF;
-    background-color: #2b2b2a;
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    }
-    
-    
-    #btnAfficher:hover {
-    padding: 10px;
-    background-color: orange;
-    border: 4px solid #FFFFFF;
-    box-shadow: 1px 1px 4px #777777;
-    -webkit-box-shadow: 1px 1px 4px #777777;
-    -moz-box-shadow: 1px 1px 4px #777777;
-    }
-
-
-    #btnCacherTout {
-        text-decoration: none;
-        padding: 10px;
-        font-family: arial;
-        font-size: 1em;
-        color: #FFFFFF;
-        background-color: #2b2b2a;
-        border-radius: 24px;
-        -webkit-border-radius: 24px;
-        -moz-border-radius: 24px;
-        }
-        
-        
-        #btnCacherTout:hover {
-        padding: 10px;
-        background-color: orange;
-        border: 4px solid #FFFFFF;
-        box-shadow: 1px 1px 4px #777777;
-        -webkit-box-shadow: 1px 1px 4px #777777;
-        -moz-box-shadow: 1px 1px 4px #777777;
-        }
-
-        hr {
-            width: 250px;
-            background-color: orange;
-            height: 2px;
-            margin-left: 0; /* Aligne l'hr à gauche */
-            margin-right: auto; /* Optionnel : permet d'utiliser l'espace restant à droite */
-            margin-bottom: 20px; /* Optionnel : ajoute de l'espace en dessous */
-        }
-        
-        .container{
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        main{
-            flex: 1;
-        }
-
-
-/* Styles par défaut (dark theme) */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: #2b2b2a;
-}
-
-header, main, footer {
-    background-color: #030303;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  :root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --card-text: #333;
+    --button-bg: #3498db;
+    --button-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.15);
+  }
+  
+  body.dark-theme {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --card-bg: #34495e;
+    --card-text: #ecf0f1;
+    --button-bg: #2980b9;
+    --button-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Cards Section */
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .ui.card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--card-shadow);
+    width: 300px;
+    min-height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ui.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ui.card .icon-container {
+    font-size: 3.5rem;
+    color: var(--button-bg);
+    margin-top: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .ui.card:hover .icon-container {
     color: #fff;
-}
-
-/* Thème clair */
-.light-theme {
-    background-color: #f5f5f5;
-    color: #000;
-}
-
-.light-theme header, 
-.light-theme main, 
-.light-theme footer {
-    background-color: #fff;
-    color: #000;
-}
-
-.light-theme nav a {
-    color: #000;
-}
-
-.light-theme nav a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-.light-theme .folder{
-    color: #000;
-}
-
-.light-theme .folder:hover{
-    color: orange;
-}
-
-.light-theme ul a {
-    color: #000;
+  }
+  
+  .ui.card .header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  
+  .ui.card .description {
+    font-size: 1rem;
+    margin: 10px 20px;
+    opacity: 0.8;
+    flex-grow: 1;
+    color: var(--text-color);
+  }
+  
+  .ui.card .description a {
+    display: block;
+    color: var(--button-bg);
+    font-weight: 600;
     text-decoration: none;
-}
-
-.light-theme ul a:hover {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .ui.card .description a:hover {
+    color: #2980b9;
     text-decoration: underline;
-    color: orange;
-}
+  }
+  
+  .ui.card .badge {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: translateY(-10px);
+    transition: background-color 0.3s ease;
+  }
+  
+  .ui.card .badge:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animation and interactivity */
+  .toggle-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .toggle-arrow.open {
+    transform: rotate(180deg);
+    border-top-color: #2980b9;
+  }
+  
+  .file-list {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .file-list.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
