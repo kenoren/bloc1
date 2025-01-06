@@ -1,181 +1,154 @@
+/* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #2b2b2a;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
-    overflow: auto; /* Permet le défilement lorsque le contenu dépasse */
-}
-
-header {
-    background-color: #030303;
-    padding: 20px;
+  }
+  
+  :root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --card-text: #333;
+    --button-bg: #3498db;
+    --button-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.15);
+  }
+  
+  body.dark-theme {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --card-bg: #34495e;
+    --card-text: #ecf0f1;
+    --button-bg: #2980b9;
+    --button-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Cards Section */
+  .cards-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #444;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
-    background-color: #030303;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    width: 800px;
-    height: auto;  /* Permet au conteneur de s'agrandir avec le contenu */
-    overflow: visible; /* Permet au contenu de déborder si nécessaire */
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul a {
-    color: #fff;
-    text-decoration: none;
-}
-
-ul a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-.profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.header-title h1 {
-    font-size: 2rem;
+  }
+  
+  .ui.card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--card-shadow);
+    width: 300px;
+    min-height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+  }
+  
+  .ui.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ui.card .icon-container {
+    font-size: 3.5rem;
+    color: var(--button-bg);
+    margin-top: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .ui.card:hover .icon-container {
     color: #fff;
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
+  }
+  
+  .ui.card .header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  
+  .ui.card .description {
     font-size: 1rem;
-}
-
-nav a:hover {
-    background-color: #ff6f00;
-    border-radius: 5px;
-    color: white;
-}
-
-/* Effet de survol plus prononcé pour les dossiers */
-.folder:hover {
-    color: #ff6f00;
-    box-shadow: 0 0 10px rgba(255, 111, 0, 0.7);
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-}
-
-.projects {
-    display: none;
-    margin-left: 20px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.projects.show {
+    margin: 10px 20px;
+    opacity: 0.8;
+    flex-grow: 1;
+    color: var(--text-color);
+  }
+  
+  .ui.card .description a {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-button {
-    background-color: #444;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #ff6f00;
-    transform: scale(1.05);
-}
-
-button:active {
-    transform: scale(1);
-}
-
-/* Footer plus élégant */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #030303;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-}
-/* Thème Clair (Light Theme) */
-.light-theme {
-    background-color: #f5f5f5;
-    color: #000;
-}
-
-.light-theme header, 
-.light-theme main, 
-.light-theme footer {
-    background-color: #fff;
-    color: #000;
-}
-
-.light-theme nav a {
-    color: #000;
-}
-
-.light-theme nav a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-.light-theme .folder {
-    color: #000;
-}
-
-.light-theme .folder:hover {
-    color: orange;
-}
-
-.light-theme ul a {
-    color: #000;
+    color: var(--button-bg);
+    font-weight: 600;
     text-decoration: none;
-}
-
-.light-theme ul a:hover {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .ui.card .description a:hover {
+    color: #2980b9;
     text-decoration: underline;
-    color: orange;
-    color: #000;
-}
-
-.light-theme .header-title h1 {
-    color: #000; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
+  }
+  
+  .ui.card .badge {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: translateY(-10px);
+    transition: background-color 0.3s ease;
+  }
+  
+  .ui.card .badge:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animation and interactivity */
+  .toggle-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .toggle-arrow.open {
+    transform: rotate(180deg);
+    border-top-color: #2980b9;
+  }
+  
+  .file-list {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .file-list.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

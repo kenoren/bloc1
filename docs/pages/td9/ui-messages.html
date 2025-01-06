@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Messages avec Modal</title>
+    <link rel="stylesheet" href="../../assets/css/td9/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+    <div class="ui container" style="margin-top: 20px;">
+        <h1 class="ui header">UI Messages avec Modal - Exemple</h1>
+
+        <button class="ui primary button" id="addMessageButton">Ajouter un message</button>
+        <button class="ui red button" id="clearMessagesButton">Effacer tous les messages</button>
+
+        <div id="messagesContainer" class="ui segment">
+            <div class="ui message">
+                <div class="header">Message par défaut</div>
+                <p>Aucun message</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="ui modal" id="messageModal">
+        <div class="header">Ajouter un message</div>
+        <div class="content">
+            <form class="ui form" id="messageForm">
+                <div class="field">
+                    <label>Type de message</label>
+                    <select id="messageType" class="ui dropdown">
+                        <option value="default">Default</option>
+                        <option value="success">Success</option>
+                        <option value="warning">Warning</option>
+                        <option value="error">Error</option>
+                        <option value="info">Info</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Icône</label>
+                    <input type="text" id="messageIcon" placeholder="Icône (ex: exclamation triangle)">
+                </div>
+                <div class="field">
+                    <label>Titre</label>
+                    <input type="text" id="messageTitle" placeholder="Titre du message">
+                </div>
+                <div class="field">
+                    <label>Contenu</label>
+                    <textarea id="messageContent" placeholder="Contenu du message"></textarea>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="messageCloseable">
+                        <label>Message refermable</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <button class="ui red button" id="cancelButton">Annuler</button>
+            <button class="ui green button" id="addButton">Ajouter</button>
+        </div>
+
+        <div id="toastContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></div>
+    </div>
+
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="../../js/td9/ui-messages.js"></script>
+</body>
+</html>

@@ -3,139 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebDev</title>
+  <title>Bloc1 - SLAM</title>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
-  <!-- Ajouter des icônes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>    
-            <div class="profile">
-                <img id="logo" src="./assets/css/logoDark.png" alt="Logo">
-            </div>
-            <div class="header-title">
-                <h1 id="theme-toggle">Bloc1-SLAM</h1>
-                <p>[Cliquez au dessus pour choisir le thème de la page]</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/kenoren" target="_blank"><i class="fab fa-github"></i> Mon Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
-                </ul>
-            </nav>
-        </header>
+  <!-- Sidebar -->
+  <div class="ui left vertical inverted sidebar menu" role="navigation" aria-label="Menu principal">
+    <a class="item" href="#td1"><i class="fas fa-database"></i> TD1</a>
+    <a class="item" href="#td2"><i class="fas fa-network-wired"></i> TD2</a>
+    <a class="item" href="#td3"><i class="fas fa-code"></i> TD3</a>
+    <a class="item" href="#td4"><i class="fas fa-puzzle-piece"></i> TD4</a>
+    <a class="item" href="#td5"><i class="fas fa-project-diagram"></i> TD5</a>
+    <a class="item" href="#td7"><i class="fas fa-envelope"></i> TD7</a>
+    <a class="item" href="#td8"><i class="fas fa-laptop-code"></i> TD8</a>
+  </div>
 
-        <main>
-            <h2>Documents</h2>
-            <p class="typing">Voici les documents importants que vous pouvez consulter :</p>
+  <!-- Pusher -->
+  <div class="pusher">
+    <div class="ui container">
+      <!-- Menu -->
+      <div class="ui menu">
+        <div class="header item">
+          <img src="./assets/css/logoLigth.png" alt="Logo Bloc1 SLAM" style="width: 50px; height: auto;">
+          Bloc1-SLAM
+        </div>
+        <a class="item" id="sidebarToggle"><i class="bars icon"></i> Menu</a>
+        <div class="right menu">
+          <a href="https://github.com/kenoren" target="_blank" class="item">
+            <i class="github icon"></i> Mon Github
+          </a>
+          <a href="https://www.linkedin.com/in/mathis-fourey-7348b0198/" target="_blank" class="item">
+            <i class="linkedin icon"></i> Linkedin
+          </a>
+        </div>
+      </div>
 
-            <div class="actions">
-                <button id="btnAfficher" onclick="btnToutAfficher()">Tout afficher</button>
-                <button id="btnCacherTout" onclick="btnRienAfficher()">Tout cacher</button>
-            </div>
-            
-            <div class="folders">
-                <div class="folder" onclick="toggleProjects('td1')"><i class="fas fa-folder"></i> TD1</div>
-                <ul id="td1" class="projects">
-                    <li><a href="https://github.com/kenoren/bloc1/blob/main/documents/td1/question.md">Question</a></li>
-                </ul>
+      <h2 class="ui header">Documents</h2>
+      <p class="ui description">Voici les documents importants que vous pouvez consulter :</p>
 
-                <div class="folder" onclick="toggleProjects('td2')"><i class="fas fa-folder"></i> TD2</div>
-                <ul id="td2" class="projects">
-                    <li><a href="./pages/mention-legales/mention.html">Mentions légales</a></li>
-                    <li><a href="./pages/pates-a-crepes/patescrepes.html">Pates à crèpes</a></li>
-                    <li><a href="./pages/status-juridiques/statusjuridique.html">Status Juridiques</a></li>
-                </ul>
+      <div class="actions">
+        <button class="ui button" id="btnAfficher">Tout afficher</button>
+        <button class="ui button" id="btnCacherTout">Tout cacher</button>
+      </div>
 
-                <div class="folder" onclick="toggleProjects('td3')"><i class="fas fa-folder"></i> TD3</div>
-                <ul id="td3" class="projects">
-                    <li><a href="./pages/td3/conseil-gestion.html">Conseil Gestion</a></li>
-                    <li><a href="./pages/td3/web-arena.html">Web Arena</a></li>
-                </ul>
-
-                <div class="folder" onclick="toggleProjects('td4')"><i class="fas fa-folder"></i> TD4</div>
-                <ul id="td4" class="projects">
-                    <li><a href="./pages/td4/calculatrice.html">Calculatrice</a></li>
-                    <li><a href="./pages/td4/toDoList.html">ToDoList</a></li>
-                </ul>
-
-                <div class="folder" onclick="toggleProjects('td5')"><i class="fas fa-folder"></i> TD5</div>
-                <ul id="td5" class="projects">
-                    <li><a href="./pages/td5/Font-tester.php">FontTester</a></li>
-                    <li><a href="./pages/td5/Lorem-ipsum.php">LoremIpsum</a></li>
-                    <li><a href="./pages/td5/Message.php">Message</a></li>
-                    <li><a href="./pages/td5/Table-gen.php">TableGen</a></li>
-                </ul>
-
-                <div class="folder" onclick="toggleProjects('td7')"><i class="fas fa-folder"></i> TD7</div>
-                <ul id="td7" class="projects">
-                    <li><a href="./pages/td7/contact.html">Contact</a></li>
-                    <li><a href="./pages/td7/signin.html">Validation</a></li>
-                </ul>
-
-                <div class="folder" onclick="toggleProjects('td8')"><i class="fas fa-folder"></i> TD8</div>
-                <ul id="td8" class="projects">
-                    <li><a href="./pages/td8/Exercice1.html">Exercice1</a></li>
-                    <li><a href="./pages/td8/Exercice2.html">Exercice2</a></li>
-                    <li><a href="./pages/td8/Exercice3.html">Exercice3</a></li>
-                    <li><a href="./pages/td8/Exercice4.html">Exercice4</a></li>
-                    <li><a href="./pages/td8/Exercice5.html">Exercice5</a></li>
-                    <li><a href="./pages/td8/la-firme.html">La Firme</a></li>
-                </ul>
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Web local. Tous droits réservés.</p>
-        </footer>
-        
+      <!-- Cards Section -->
+      <div class="cards-section" id="cardsSection"></div>
     </div>
+  </div>
 
-    <script>
-        function toggleProjects(tdId) {
-            const projectsList = document.getElementById(tdId);
-            if (projectsList.style.display === 'none' || projectsList.style.display === '') {
-                projectsList.style.display = 'block';
-                setTimeout(() => projectsList.classList.add('show'), 10);  // Ajouter une animation d'apparition
-            } else {
-                projectsList.classList.remove('show');
-                setTimeout(() => projectsList.style.display = 'none', 300);  // Cache après l'animation
-            }
-        }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="data/data.js"></script> <!-- Lien vers le fichier data.js -->
+  <script>
+    $(document).ready(function () {
+      // Générer dynamiquement les cartes pour chaque TD
+      const cardsSection = $('#cardsSection');
+      data.forEach(td => {
+        let cardHtml = `
+          <div class="ui card" id="${td.name}">
+            <div class="icon-container">
+              <i class="${td.icon}" aria-hidden="true"></i>
+            </div>
+            <div class="header">${td.name} - ${td.title}</div>
+            <div class="description">
+              <span class="toggle-arrow"></span>
+              <div class="file-list">
+        `;
+        
+        td.exercises.forEach(exercise => {
+          cardHtml += `<a href="${exercise.link}">${exercise.name}</a>`;
+        });
 
-        function toggleTheme() {
-            const body = document.body;
-            const logo = document.getElementById('logo');
-            
-            body.classList.toggle('light-theme');
-            
-            if (body.classList.contains('light-theme')) {
-                logo.src = './assets/css/logoLigth.png';
-            } else {
-                logo.src = './assets/css/logoDark.png';
-            }
-        }
+        cardHtml += `
+              </div>
+            </div>
+          </div>
+        `;
+        cardsSection.append(cardHtml);
+      });
 
-        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+      $("#sidebarToggle").click(function () {
+        $(".ui.sidebar").sidebar("toggle");
+      });
 
-        function btnToutAfficher() {
-            const allProjects = document.querySelectorAll('.projects');
-            allProjects.forEach(project => {
-                project.style.display = 'block';
-                setTimeout(() => project.classList.add('show'), 10);  // Animation d'apparition
-            });
-        }
+      $(".toggle-arrow").click(function () {
+        var $this = $(this);
+        var $fileList = $this.next(".file-list");
 
-        function btnRienAfficher() {
-            const allProjects = document.querySelectorAll('.projects');
-            allProjects.forEach(project => {
-                project.classList.remove('show');
-                setTimeout(() => project.style.display = 'none', 300);  // Cache après animation
-            });
-        }
-    </script>
+        $fileList.toggleClass("show");
+        $this.toggleClass("open");
+
+        var expanded = $this.attr("aria-expanded") === "true";
+        $this.attr("aria-expanded", !expanded);
+      });
+
+      $("#btnAfficher").click(function () {
+        $(".cards-section .ui.card").fadeIn();
+      });
+
+      $("#btnCacherTout").click(function () {
+        $(".cards-section .ui.card").fadeOut();
+      });
+    });
+  </script>
 </body>
 </html>
